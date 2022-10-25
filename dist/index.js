@@ -56,4 +56,35 @@ const user1 = {
     id: 1,
     name: "John",
 };
-const p1 = 5;
+const add = (x, y) => x + y;
+const subtract = (x, y) => x - y;
+// Classes
+class Person {
+    //constructor is a method that is ran when an object is instantiated from a class.
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name}  is now registered`;
+    }
+}
+// const brad = new Person(1, "Anitor Abraham");
+// const anitor = new Person(2, "Anitor Godswill");
+// console.log(anitor.register());
+// console.log(brad, anitor);
+// subclass
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Anitor", "Developer");
+// console.log(emp.register());
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["abraham", "richmond"]);
